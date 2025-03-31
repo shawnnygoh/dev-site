@@ -17,7 +17,7 @@ const navigation = [
 ];
 
 const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -27,7 +27,8 @@ const Header = () => {
   }, []);
   
   const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+    const currentTheme = resolvedTheme || theme;
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
   };
 
   useEffect(() => {
@@ -86,7 +87,7 @@ const Header = () => {
             }`}
             suppressHydrationWarning
           >
-            {mounted && (theme === 'dark' ? (
+            {mounted && (resolvedTheme === 'dark' ? (
               <Sun className="h-5 w-5 transition-all" />
             ) : (
               <Moon className="h-5 w-5 transition-all" />

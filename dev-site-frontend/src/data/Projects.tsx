@@ -7,10 +7,10 @@ export const projectsData = [
       externalUrl: '',
       githubUrl: 'https://github.com/shawnnygoh/healthhack-clinician-portal',
       videoUrl: 'https://www.youtube.com/watch?v=UeE0V4xHvwc',
-      description: "A gamified hand exercise platform for elderly suffering from Parkinson's and Arthritis, integrated with a clinician dashboard utilizing LLMs and RAG pipelines with InterSystems IRIS Vector Search for clinicians to search for semantically similar patients.",
+      description: "A gamified hand exercise platform for elderly suffering from Parkinson's and Arthritis, integrated with a clinician dashboard utilizing LLMs and RAG pipelines with  IRIS Vector Search for clinicians to search for semantically similar patients.",
       details: 'This project was developed for HealthHack 2025, addressing mobility challenges in elderly patients. The platform uses gamification to encourage regular hand exercises, making rehabilitation more engaging and effective. The clinician dashboard provides real-time insights on patient progress and allows medical professionals to identify patterns across similar cases.',
       technologies: ['Python', 'InterSystems IRIS', 'Groq LLM API', 'RAG Pipeline', 'Vector Search'],
-      techstack: ['/python.svg', '/intersystems.png', '/groq.png'],
+      techstack: ['/python.svg', '/intersystems.svg', '/groq.png'],
       fullImage: '/projects/dexterity-dash-full.png',
     },
     {
