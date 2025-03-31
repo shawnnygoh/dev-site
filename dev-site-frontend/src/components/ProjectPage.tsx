@@ -1,17 +1,14 @@
 'use client';
 
-import { useParams } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { projectsData } from '@/data/Projects';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
-import { Badge } from '@/components/ui/badge';
 
-export default function ProjectPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export default function ProjectPage({ slug }: { slug: string }) {
   const project = projectsData.find(p => p.slug === slug);
   
   if (!project) {
@@ -146,7 +143,6 @@ export default function ProjectPage() {
               )}
             </div>
           </section>
-
         </div>
       </AnimateOnScroll>
     </main>
